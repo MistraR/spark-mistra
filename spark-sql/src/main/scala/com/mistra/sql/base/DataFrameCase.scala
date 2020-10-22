@@ -21,19 +21,12 @@ object DataFrameCase {
     studentDF.show
     studentDF.show(30)
     studentDF.show(30, false)
-
     studentDF.take(10)
     studentDF.first()
     studentDF.head(3)
-
-
     studentDF.select("email").show(30, false)
-
-
     studentDF.filter("name=''").show
     studentDF.filter("name='' OR name='NULL'").show
-
-
     //name以M开头的人
     studentDF.filter("SUBSTR(name,0,1)='M'").show
 
@@ -44,7 +37,6 @@ object DataFrameCase {
     studentDF.sort(studentDF("name").asc, studentDF("id").desc).show
 
     studentDF.select(studentDF("name").as("student_name")).show
-
 
     val studentDF2 = rdd.map(_.split("\\|")).map(line => Student(line(0).toInt, line(1), line(2), line(3))).toDF()
 
