@@ -1,4 +1,4 @@
-package com.mistra.data.hbase;
+package com.mistra.streaming.project.utils;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.client.HBaseAdmin;
